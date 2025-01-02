@@ -41,6 +41,12 @@
       "relation": "oneToMany",
       "target": "api::package.package",
       "mappedBy": "gym"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "gyms"
     }
   }
 }
