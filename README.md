@@ -2,6 +2,31 @@
 
 Strapi backend for the Data Fit Camp project.
 
+## Setup
+
+1. Install Node.js 18–22.
+2. Copy `.env.example` to `.env` and replace every `tobemodified` value with your own secrets.
+3. Install dependencies and start the admin panel:
+
+   ```
+   npm install
+   npm run develop
+   ```
+
+   The API runs on http://localhost:1337 and uses SQLite by default (`DATABASE_CLIENT=sqlite`).
+
+## Content types
+
+| Content type | Main fields                                   |
+|--------------|-----------------------------------------------|
+| Gym          | name, address, opening hours, location        |
+| Location     | name, image, gyms                             |
+| Facility     | name, description, image, gyms                |
+| Package      | name, price, duration, gym, benefits          |
+| Benefit      | name, package                                 |
+| Subscription | package, user, start/end time, tax, total     |
+| Account      | full name, email, phone, subscription         |
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
